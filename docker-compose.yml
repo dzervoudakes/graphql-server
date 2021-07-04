@@ -1,0 +1,39 @@
+version: "3.5"
+
+services:
+  mongo:
+    container_name: graphql_server_dev
+    image: mongo:latest
+    ports:
+      - 27017:27017
+    command: mongod --port 27017
+
+  mongo_seed:
+    image: 'pkosiec/mongo-seeding:3.0.0'
+    environment:
+      - DROP_DATABASE=true
+      - REPLACE_ID=true
+      - DB_NAME=graphql-server
+      - DB_PORT=27017
+      - DB_HOST=mongo
+    volumes:
+      - ./datastore:/datastore
+    working_dir: /datastore
+    links:
+      - mongo
+    depends_on:
+      - mongo
+
+  server:
+    image: 'node:14.6.0'
+    volumes:
+      - ./:/server
+    working_dir: /server
+    ports:
+      - "3000:3000"
+    environment:
+      - PORT=3000
+      - DB_CONNECTION_STRING=mongodb://mongo:27017/graphql-server
+    command: yarn start
+    depends_on:
+      - mongo
