@@ -48,7 +48,7 @@ describe('CarDao', () => {
     expect(result?.vin).toEqual(payload.vin);
   });
 
-  it('gets cars by make and model', async () => {
+  it('gets a list of cars by make and model', async () => {
     const carDao = new CarDao();
     const payload = { ...mockCarOne, vin: uuidv4() };
 

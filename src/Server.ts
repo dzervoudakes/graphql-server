@@ -17,7 +17,7 @@ class Server {
     this.setupGraphQL();
   }
 
-  private app;
+  public app;
 
   private async setupDatabaseConnection(): Promise<void> {
     await mongoose.connect(process.env.DB_CONNECTION_STRING || '', {
