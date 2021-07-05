@@ -16,17 +16,17 @@ export class CarDao {
     return result;
   }
 
-  public async createCar(user: CarType): Promise<CarType> {
-    const result = await Car.create(user);
+  public async createCar(car: CarType): Promise<CarType> {
+    const result = await Car.create(car);
     return result;
   }
 
-  public async updateCar(id: string, user: CarType): Promise<CarType | null> {
-    const result = await Car.findByIdAndUpdate(id, user, { new: true });
+  public async updateCar(id: string, car: CarType): Promise<CarType | null> {
+    const result = await Car.findByIdAndUpdate(id, car, { new: true });
     return result;
   }
 
-  public async deleteUser(id: string): Promise<CarType | null> {
+  public async deleteCar(id: string): Promise<CarType | null> {
     const result = await Car.findByIdAndDelete(id);
     return result;
   }
