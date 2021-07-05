@@ -1,4 +1,4 @@
-import { Car, CarType } from '../models';
+import { Car, CarType } from '@src/models';
 
 export class CarDao {
   public async getCars(): Promise<CarType[]> {

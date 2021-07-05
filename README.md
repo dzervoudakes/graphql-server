@@ -40,7 +40,7 @@ yarn clean
 
 ## Technical Requirements
 
-> The runtime environment for this application requires `node >= 14.6.0` and `npm >= 1.22.4`.
+> The runtime environment for this application requires `node >= 14.6.0` and `yarn >= 1.22.4`.
 
 ## Configuration
 

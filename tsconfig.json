@@ -12,6 +12,9 @@
     "moduleResolution": "node",
     "noUnusedLocals": true,
     "outDir": "dist",
+    "paths": {
+      "@src/*": ["src/*"]
+    },
     "resolveJsonModule": true,
     "skipLibCheck": false,
     "sourceMap": true,
