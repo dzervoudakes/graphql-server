@@ -1,13 +1,13 @@
-import { GraphQLInt, GraphQLString, GraphQLObjectType } from 'graphql';
+import { GraphQLInt, GraphQLNonNull, GraphQLString, GraphQLObjectType } from 'graphql';
 
 export const CarType = new GraphQLObjectType({
   name: 'Car',
   fields: () => ({
-    id: { type: GraphQLString },
-    make: { type: GraphQLString },
-    model: { type: GraphQLString },
-    vin: { type: GraphQLString },
-    year: { type: GraphQLInt }
+    id: { type: GraphQLNonNull(GraphQLString) },
+    make: { type: GraphQLNonNull(GraphQLString) },
+    model: { type: GraphQLNonNull(GraphQLString) },
+    vin: { type: GraphQLNonNull(GraphQLString) },
+    year: { type: GraphQLNonNull(GraphQLInt) }
   })
 });
 
