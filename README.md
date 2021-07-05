@@ -2,6 +2,8 @@
 
 > Mini GraphQL server for querying and mutating a small database of vehicles.
 
+[![prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://prettier.io/)
+
 ## Motivation
 
 Historically I'm more familiar with consuming GraphQL APIs on the frontend (Apollo Client is awesome, by the way). I haven't yet created my own GraphQL server from scratch and so I thought it would be a fun learning experience. I've worked within a Graphene model in a Python/Flask app before, though I was curious to explore an Express-centric solution as well.
