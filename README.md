@@ -126,6 +126,18 @@ yarn lint
 yarn lint:fix
 ```
 
+### Run Unit Tests
+
+```sh
+yarn test
+```
+
+### Run Unit Tests with Coverage Report
+
+```sh
+yarn test:coverage
+```
+
 ### Build for Production
 
 ```sh
@@ -140,7 +152,7 @@ yarn clean
 
 ## Technical Requirements
 
-> The runtime environment for this application requires `node >= 14.6.0` and `yarn >= 1.22.4`.
+> The runtime environment for this application requires `node >= 14.15.0` and `yarn >= 1.22.4`.
 
 ## Configuration
 
