@@ -68,7 +68,12 @@ While the server is running, the GraphiQL playground can be accessed in a web br
 
 ```gql
 mutation {
-  createCar(make: "Acura", model: "TL", year: 1998, vin: "1D4PT5GK8BW557445") {
+  createCar(
+    make: "Acura",
+    model: "TL",
+    year: 1998,
+    vin: "1D4PT5GK8BW557445"
+  ) {
     id
     make
     model
@@ -82,7 +87,13 @@ mutation {
 
 ```gql
 mutation {
-  updateCar(id: "60e27002aed956ce6772d774", make: "Acura", model: "TSX", year: 1998, vin: "1D4PT5GK8BW557445") {
+  updateCar(
+    id: "60e27002aed956ce6772d774",
+    make: "Acura",
+    model: "TSX",
+    year: 1998,
+    vin: "1D4PT5GK8BW557445"
+  ) {
     id
     make
     model
