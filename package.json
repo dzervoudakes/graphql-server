@@ -20,7 +20,9 @@
     "chalk": "^4.1.1",
     "cors": "^2.8.5",
     "express": "^4.17.1",
-    "mongoose": "^5.12.13"
+    "express-graphql": "^0.12.0",
+    "graphql": "^15.5.1",
+    "mongoose": "^5.13.2"
   },
   "devDependencies": {
     "@dztools/eslint-config-typescript": "^1.1.2",

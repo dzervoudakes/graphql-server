@@ -1,3 +1,5 @@
-import chalk from 'chalk';
+import Server from './Server';
 
-console.log(chalk.cyan('Hello world'));
+const server = new Server();
+
+server.start();
