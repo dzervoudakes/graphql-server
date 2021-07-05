@@ -1,4 +1,4 @@
-import { GraphQLInt, GraphQLString, GraphQLObjectType } from 'graphql';
+import { GraphQLInt, GraphQLNonNull, GraphQLObjectType, GraphQLString } from 'graphql';
 import { CarDao } from '@src/daos';
 import { ICar } from '@src/models';
 import { CarType } from './CarType';
@@ -6,10 +6,10 @@ import { CarType } from './CarType';
 const carDao = new CarDao();
 
 const commonArgs = {
-  make: { type: GraphQLString },
-  model: { type: GraphQLString },
-  year: { type: GraphQLInt },
-  vin: { type: GraphQLString }
+  make: { type: GraphQLNonNull(GraphQLString) },
+  model: { type: GraphQLNonNull(GraphQLString) },
+  year: { type: GraphQLNonNull(GraphQLInt) },
+  vin: { type: GraphQLNonNull(GraphQLString) }
 };
 
 export const Mutation = new GraphQLObjectType({
@@ -27,7 +27,7 @@ export const Mutation = new GraphQLObjectType({
       type: CarType,
       args: {
         ...commonArgs,
-        id: { type: GraphQLString }
+        id: { type: GraphQLNonNull(GraphQLString) }
       },
       resolve: async (_, args) => {
         const { id, ...rest } = args;
@@ -38,7 +38,7 @@ export const Mutation = new GraphQLObjectType({
     deleteCar: {
       type: CarType,
       args: {
-        id: { type: GraphQLString }
+        id: { type: GraphQLNonNull(GraphQLString) }
       },
       resolve: async (_, args) => {
         const result = await carDao.deleteCar(args.id);

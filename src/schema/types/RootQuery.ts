@@ -1,4 +1,4 @@
-import { GraphQLList, GraphQLString, GraphQLObjectType } from 'graphql';
+import { GraphQLList, GraphQLNonNull, GraphQLObjectType, GraphQLString } from 'graphql';
 import { CarDao } from '@src/daos';
 import { CarType } from './CarType';
 
@@ -17,7 +17,7 @@ export const RootQuery = new GraphQLObjectType({
     getCarById: {
       type: CarType,
       args: {
-        id: { type: GraphQLString }
+        id: { type: GraphQLNonNull(GraphQLString) }
       },
       resolve: async (_, args) => {
         const result = await carDao.getCar(args.id);
@@ -27,8 +27,8 @@ export const RootQuery = new GraphQLObjectType({
     getCarsByMakeAndModel: {
       type: new GraphQLList(CarType),
       args: {
-        make: { type: GraphQLString },
-        model: { type: GraphQLString }
+        make: { type: GraphQLNonNull(GraphQLString) },
+        model: { type: GraphQLNonNull(GraphQLString) }
       },
       resolve: async (_, args) => {
         const result = await carDao.getCarsByMakeAndModel(args.make, args.model);
