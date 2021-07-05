@@ -17,7 +17,7 @@ export const Mutation = new GraphQLObjectType({
   fields: {
     createCar: {
       type: CarType,
-      args: { ...commonArgs },
+      args: commonArgs,
       resolve: async (_, args) => {
         const result = await carDao.createCar(args as ICar);
         return result;

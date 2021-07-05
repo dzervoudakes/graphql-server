@@ -32,8 +32,9 @@ class Server {
   }
 
   public start(): void {
-    this.app.listen(process.env.PORT, () => {
-      const { PORT = 3000 } = process.env;
+    const PORT = process.env.PORT || 3000;
+
+    this.app.listen(PORT, () => {
       console.log(chalk.cyan(`Server listening on port ${PORT}.`));
     });
   }
