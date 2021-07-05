@@ -1,7 +1,7 @@
 import { Car, ICar } from '@src/models';
 
 export class CarDao {
-  public async getCars(): Promise<ICar[]> {
+  public async getAllCars(): Promise<ICar[]> {
     const result = await Car.find({});
     return result;
   }

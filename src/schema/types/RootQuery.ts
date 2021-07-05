@@ -10,7 +10,7 @@ export const RootQuery = new GraphQLObjectType({
     getAllCars: {
       type: new GraphQLList(CarType),
       resolve: async () => {
-        const result = await carDao.getCars();
+        const result = await carDao.getAllCars();
         return result;
       }
     },
