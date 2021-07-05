@@ -4,7 +4,94 @@
 
 - @TODO description/motivation
 - @TODO setup (install, docker)
-- @TODO example queries/mutations
+
+## Example Queries
+
+### Get All Cars
+
+```gql
+{
+  getAllCars {
+    id
+    make
+    model
+    year
+    vin
+  }
+}
+```
+
+### Get Car by ID
+
+```gql
+{
+  getCarById(id: "60e27002aed956ce6772d774") {
+    id
+    make
+    model
+    year
+    vin
+  }
+}
+```
+
+### Get Cars by Make and Model
+
+```gql
+{
+  getCarsByMakeAndModel(make: "Acura", model: "TL") {
+    id
+    make
+    model
+    year
+    vin
+  }
+}
+```
+
+## Example Mutations
+
+### Create Car
+
+```gql
+mutation {
+  createCar(make: "Acura", model: "TL", year: 1998, vin: "1D4PT5GK8BW557445") {
+    id
+    make
+    model
+    year
+    vin
+  }
+}
+```
+
+### Update Car
+
+```gql
+mutation {
+  updateCar(id: "60e27002aed956ce6772d774", make: "Acura", model: "TSX", year: 1998, vin: "1D4PT5GK8BW557445") {
+    id
+    make
+    model
+    year
+    vin
+  }
+}
+```
+
+### Delete Car
+
+```gql
+mutation {
+  deleteCar(id: "60e27002aed956ce6772d774") {
+    id
+    make
+    model
+    year
+    vin
+  }
+}
+```
 
 ## Build Scripts
 
