@@ -11,6 +11,11 @@ export class CarDao {
     return result;
   }
 
+  public async getCarsByMakeAndModel(make: string, model: string): Promise<CarType[]> {
+    const result = await Car.find({ make, model });
+    return result;
+  }
+
   public async createCar(user: CarType): Promise<CarType> {
     const result = await Car.create(user);
     return result;
