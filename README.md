@@ -1,9 +1,20 @@
 # GraphQL Server
 
-> Mini GraphQL server for fun.
+> Mini GraphQL server for querying and mutating a small database of vehicles.
 
-- @TODO description/motivation
-- @TODO setup (install, docker)
+## Motivation
+
+Historically I'm more familiar with consuming GraphQL APIs on the frontend (Apollo Client is awesome, by the way). I haven't yet created my own GraphQL server from scratch and so I thought it would be a fun learning experience. I've worked within a Graphene model in a Python/Flask app before, though I was curious to explore an Express-centric solution as well.
+
+Shout out to [mockaroo](https://mockaroo.com/) for making generation of mock data painless. 🦘
+
+## Project Setup
+
+- Ensure that `Docker` is installed and running
+- In a terminal window at the project root, run `yarn install`
+- Run `docker compose up` to seed the database and start the Express server
+
+While the server is running, the GraphiQL playground can be accessed in a web browser at `http://localhost:3000/graphql`.
 
 ## Example Queries
 
