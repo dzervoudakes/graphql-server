@@ -25,7 +25,7 @@ services:
       - mongo
 
   server:
-    image: 'node:14.6.0'
+    image: 'node:14.15.0'
     volumes:
       - ./:/server
     working_dir: /server
