@@ -24,15 +24,11 @@ describe('CarDao', () => {
     await Car.create([mockCarOne, mockCarTwo]);
     const result = await carDao.getAllCars();
 
-    expect(result?.[0].make).toEqual(mockCarOne.make);
-    expect(result?.[0].model).toEqual(mockCarOne.model);
-    expect(result?.[0].year).toEqual(mockCarOne.year);
-    expect(result?.[0].vin).toEqual(mockCarOne.vin);
+    const mockCarOneCreated = result?.some((car) => car.vin === mockCarOne.vin);
+    const mockCarTwoCreated = result?.some((car) => car.vin === mockCarTwo.vin);
 
-    expect(result?.[1].make).toEqual(mockCarTwo.make);
-    expect(result?.[1].model).toEqual(mockCarTwo.model);
-    expect(result?.[1].year).toEqual(mockCarTwo.year);
-    expect(result?.[1].vin).toEqual(mockCarTwo.vin);
+    expect(mockCarOneCreated).toBe(true);
+    expect(mockCarTwoCreated).toBe(true);
   });
 
   it('gets a car by id', async () => {
