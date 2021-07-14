@@ -26,8 +26,8 @@ export const Mutation = new GraphQLObjectType({
     updateCar: {
       type: CarType,
       args: {
-        ...commonArgs,
-        id: { type: GraphQLNonNull(GraphQLString) }
+        id: { type: GraphQLNonNull(GraphQLString) },
+        ...commonArgs
       },
       resolve: async (_, args) => {
         const { id, ...rest } = args;

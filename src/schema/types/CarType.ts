@@ -6,8 +6,8 @@ export const CarType = new GraphQLObjectType({
     id: { type: GraphQLNonNull(GraphQLString) },
     make: { type: GraphQLNonNull(GraphQLString) },
     model: { type: GraphQLNonNull(GraphQLString) },
-    vin: { type: GraphQLNonNull(GraphQLString) },
-    year: { type: GraphQLNonNull(GraphQLInt) }
+    year: { type: GraphQLNonNull(GraphQLInt) },
+    vin: { type: GraphQLNonNull(GraphQLString) }
   })
 });
 
