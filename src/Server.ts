@@ -5,8 +5,6 @@ import { graphqlHTTP } from 'express-graphql';
 import chalk from 'chalk';
 import { Schema as schema } from './schema';
 
-// @todo comment for testing gitHooks -- remove me
-
 class Server {
   constructor() {
     this.app = express();
