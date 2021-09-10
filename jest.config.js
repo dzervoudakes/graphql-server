@@ -15,11 +15,16 @@ module.exports = {
   },
   testMatch: ['<rootDir>/test/**/*(*.)@(spec|test).{js,jsx,ts,tsx}'],
   transform: {
-    '^.+\\.(ts|js)$': require.resolve('ts-jest')
+    '^.+\\.(ts|js)$': 'ts-jest'
   },
   moduleDirectories: ['node_modules'],
   moduleNameMapper: {
     '^@src[/](.+)': '<rootDir>/src/$1',
     '^node_modules[/](.+)': '<rootDir>/node_modules/$1'
+  },
+  globals: {
+    'ts-jest': {
+      isolatedModules: true
+    }
   }
 };
