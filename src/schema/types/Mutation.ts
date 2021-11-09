@@ -1,6 +1,8 @@
 import { GraphQLInt, GraphQLNonNull, GraphQLObjectType, GraphQLString } from 'graphql';
+
 import { CarDao } from '@src/daos';
 import { ICar } from '@src/models';
+
 import { CarType } from './CarType';
 
 const carDao = new CarDao();

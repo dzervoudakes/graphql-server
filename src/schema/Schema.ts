@@ -1,4 +1,5 @@
 import { GraphQLSchema } from 'graphql';
+
 import { Mutation, RootQuery } from './types';
 
 export const Schema = new GraphQLSchema({

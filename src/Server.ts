@@ -1,8 +1,9 @@
-import express from 'express';
-import cors from 'cors';
-import mongoose from 'mongoose';
-import { graphqlHTTP } from 'express-graphql';
 import chalk from 'chalk';
+import cors from 'cors';
+import express from 'express';
+import { graphqlHTTP } from 'express-graphql';
+import mongoose from 'mongoose';
+
 import { Schema as schema } from './schema';
 
 class Server {

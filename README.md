@@ -6,7 +6,7 @@
 
 ## Motivation
 
-Historically I'm more familiar with consuming GraphQL APIs on the frontend (Apollo Client is awesome, by the way). I haven't yet created my own GraphQL server from scratch and so I thought it would be a fun learning experience. I've worked within a Graphene model in a Python/Flask app before, though I was curious to explore an Express-centric solution as well.
+Historically I'm more familiar with consuming GraphQL APIs on the frontend (Apollo Client is awesome, by the way). Until recently, I hadn't yet created my own GraphQL server from scratch and so I thought it would be a fun learning experience. I've worked with Graphene in a Python/Flask app before, though I was curious to explore creating a Node/Express solution as well.
 
 Shout out to [mockaroo](https://mockaroo.com/) for making generation of mock data painless. 🦘
 

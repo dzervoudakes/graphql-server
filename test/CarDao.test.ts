@@ -1,7 +1,9 @@
 import mongoose, { Mongoose } from 'mongoose';
 import { v4 as uuidv4 } from 'uuid';
+
 import { CarDao } from '@src/daos';
 import { Car } from '@src/models';
+
 import { mockCarOne, mockCarTwo, mockCarThree } from './utils';
 
 describe('CarDao', () => {
